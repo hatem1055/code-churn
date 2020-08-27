@@ -1,0 +1,91 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <!--bootstrap cdn-->
+         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+         <!--chartjs cdn-->
+         <link href="https://github.com/chartjs/Chart.js.git">
+         <!--fontawesome cdn-->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+        <!--google font cdn-->
+         <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+        <!--hover.css cdn-->
+         <link href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" rel="stylesheet">
+         <!--emojy cdn-->
+         <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
+         <!--css files-->
+         <link href="css/index.css" rel="stylesheet">
+    <title>index</title>
+</head>
+<body>
+    <header class='text-center'>
+        <h5>code churn calculator</h5>
+    </header>
+
+    <div class="setup row text-center">
+         <div class="col-4">
+            <div class="card-conatiner dev-cards">
+                <h6 class='cards-heading'>Developers</h6>
+                <div class="cards">
+                </div>
+                <a class="add-dev add-card" align='left'><i class="fas fa-plus"></i> Add another developer</a>
+            </div>
+
+         </div>
+         <div class="col-4"></div> 
+         <div class="col-4">
+            <div class="card-conatiner urls-cards">
+                <h6 class='cards-heading'>Urls</h6>
+                <div class="cards">
+                </div>
+                <a class="add-dev add-card" align='left'><i class="fas fa-plus"></i> Add another Url</a>
+            </div>
+         </div>   
+    </div>
+    <div class="setup-date">
+        <form action="" class='setup-form d-inline-flex'>
+            <div class="after-div date-setup-div">
+                <label class='after-label date-label'>After</label>
+                <input type="text" name='after' id='after' class='after date-input h-input' placeholder="yyyy-mm-dd">
+            </div>
+            <div class="befor-div date-setup-div">
+                <label class='before-label date-label'>Before</label>
+                <input type="text" name='befor' id='befor' class='before date-input h-input' placeholder="yyyy-mm-dd">
+            </div>
+            <div class="btn-calc">
+                <button class='btn btn-primary calc' type='button'>Calculate churn</button>
+            </div>
+
+        </form>
+    </div>
+    <div class="churn-table" style="display: none;">
+        <table class="table table-bordered table-dark">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Contributions</th>
+                <th scope="col">Churn</th>
+                <th scope="col">Url</th>
+              </tr>
+            </thead>
+            <tbody>
+                
+            </tbody>
+          </table>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> 
+    <script src="./js/dom-elements.js"></script>  
+    <script src="./js/dev.js"></script>  
+    <script src="./js/url.js"></script>  
+    <script src="./js/cals.js"></script>
+    <script src="./js/index.js"></script>  
+    
+</body>
+</html>

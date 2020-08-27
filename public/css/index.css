@@ -1,0 +1,93 @@
+body{
+    background-color: #c2c5d4;
+    overflow-x: hidden;
+}
+header{
+    background-color: black;
+    color: white;
+    padding: 10px;
+}
+.setup{
+    margin:17px;
+}
+.card-conatiner{
+    background-color: #ebecf0;
+    border-radius: 3px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    max-height: 100%;
+    position: relative;
+    white-space: normal;
+}
+.cards-heading{
+    text-align: left;
+    margin-left: 9px;
+    margin-top: 9px;
+}
+.card{
+    flex: 1 1 auto;
+    margin-bottom: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin: 12px 4px;
+    padding: 3px 4px;
+    z-index: 1;
+    min-height: 0;
+    align-items: flex-start;
+}
+.card-content{
+    display: inline-block;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+    line-height: 34px;
+}
+.card-controllers{
+    position: relative;
+    left: 16px;
+    width: 30%;
+    padding: 0px;
+}
+.controller{
+    color:white !important;
+    font-weight: 700;
+}
+.add-card{
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 17px;
+    margin: 7px;
+}
+.add-card:hover {
+    background-color: rgba(9,30,66,.08);
+    color: #172b4d;
+}
+.setup-form{
+    width: 41%;
+}
+.setup-date{
+    margin:17px
+}
+.date-setup-div{
+    margin-right: 48px;
+}
+.btn-calc{
+    margin: 20px;
+}
+.date-label{
+    display: block;
+    margin-bottom: 0;
+    font-weight: 600;
+}
+.date-input,.h-input{
+    border-radius: 5px;
+    border: 1px solid #8e7474;
+    padding: 3px 3px 3px 12px;
+}
+.churn-table{
+    width:80%;
+    margin:auto;
+}
+
