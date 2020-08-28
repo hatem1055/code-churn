@@ -15,7 +15,7 @@ $('body').on('blur','.urls-cards .new-card',async function(){
 $('body').on('click','.urls-cards .delete',async function(){
     try {
            const id = $(this).parent().parent().attr('data-id')
-            await axios.delete('/url',{id})
+           const del = await axios.delete('/url',{data:{id}})
             $(this).parent().parent().fadeOut().remove()
         }catch(e){
             console.log(e)

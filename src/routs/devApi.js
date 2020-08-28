@@ -36,7 +36,7 @@ DevRouter.patch('/dev',async (req,res)=>{
 DevRouter.delete('/dev',async (req, res)=>{
     const _id = req.body.id
     try {
-        const developer = await Developer.findOneAndDelete(_id)
+        const developer = await Developer.findOneAndDelete({_id})
         res.send(developer)
     } catch (e) {
         res.send(e)

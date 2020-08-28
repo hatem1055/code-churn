@@ -18,6 +18,7 @@ const add_urls = function (){
         urls.forEach(url => {
             $('.urls-cards').find('.cards').append(card(url.name,url._id))
         })
+        $('#loadingScreen').fadeOut()
     }).catch(e=>{
         return e  
     })

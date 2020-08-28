@@ -14,8 +14,8 @@ $('body').on('blur','.dev-cards .new-card',async function(){
 $('body').on('click','.dev-cards .delete',async function(){
     try {
            const id = $(this).parent().parent().attr('data-id')
-            await axios.delete('/dev',{id})
-            $(this).parent().parent().fadeOut().remove()
+           const del = await axios.delete('/dev',{data:{id}})
+           $(this).parent().parent().fadeOut().remove()
         }catch(e){
             console.log(e)
         }

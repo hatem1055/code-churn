@@ -36,7 +36,7 @@ urlRouter.patch('/url',async (req,res)=>{
 urlRouter.delete('/url',async (req, res)=>{
     const _id = req.body.id
     try {
-        const url = await Url.findOneAndDelete(_id)
+        const url = await Url.findOneAndDelete({_id})
         res.send(url)
     } catch (e) {
         res.send(e)

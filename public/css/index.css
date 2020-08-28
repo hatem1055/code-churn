@@ -90,4 +90,28 @@ header{
     width:80%;
     margin:auto;
 }
+#loadingScreen{
+    position: fixed;
+    height: 100%;
+    width:100%;
+    z-index:999;
+    top:0;
+    background-color: white;
+}
+.spinner {
+    color: black;
+    height: 28px;
+    width: 28px;
+    border: solid 5px #1c87c9;
+    border-bottom-color: white;
+    border-radius: 50%;
+    position: absolute;
+    top: 45%;
+    left: 48%;
+    animation:rotate 2s linear infinite;
+}
+@keyframes rotate {
+    from {transform: rotate(0deg);}
+    to {transform: rotate(360deg);}
+  }
 
