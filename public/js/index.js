@@ -10,29 +10,23 @@ const add_devs = function (){
         return e  
     })
 }
-
-//fetch urls
-const add_urls = function (){
-    axios.get('/url').then(r=>{
-        let urls = r.data
-        urls.forEach(url => {
-            $('.urls-cards').find('.cards').append(card(url.name,url._id))
-        })
-        $('#loadingScreen').fadeOut()
-    }).catch(e=>{
-        return e  
+const add_branches = async function (){
+    try{
+    const {data} = await axios.get('/branch')
+    data.forEach(branch=>{
+        const element = branchRow(branch._id,branch.name,branch.owner,branch.repo)
+        $('.branches-cards tbody').append(element)
     })
+    $('#loadingScreen').fadeOut()
+    }catch (e){
+        console.log(e)
+    }
 }
 
-
-
-
 //adding new card
-$('.add-card').click(function(){
+$('.add-dev').click(function(){
 $(this).parent().find('.cards').append(newCard())
 })
-
-
 
 
 
@@ -55,4 +49,4 @@ $('body').on('blur','.edit-card',function(){
 
 
 add_devs()
-add_urls()
+add_branches()

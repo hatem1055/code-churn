@@ -1,7 +1,7 @@
 const express = require('express'),
       app = express(),
       path = require('path'),
-      urlRoute = require('./routs/urlApi'),
+      branchRoute = require('./routs/branchApi'),
       devRoute = require('./routs/devApi'),
       churnRoute = require('./routs/calcChurn')
 
@@ -15,7 +15,7 @@ app.use(express.static(path.join(__dirname,'../public')))
 //runing mongoose
 require('./db/mongoose')
 //routs
-app.use(urlRoute)
+app.use(branchRoute)
 app.use(devRoute)
 app.use(churnRoute)
 //runing the app

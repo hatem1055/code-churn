@@ -89,6 +89,7 @@ header{
 .churn-table{
     width:80%;
     margin:auto;
+    margin-bottom: 30px;
 }
 #loadingScreen{
     position: fixed;
@@ -113,5 +114,10 @@ header{
 @keyframes rotate {
     from {transform: rotate(0deg);}
     to {transform: rotate(360deg);}
+  }
+  .modal-content{
+    width: 147%;
+    position: absolute;
+    left: -18%;
   }
 
