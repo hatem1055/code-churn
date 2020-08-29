@@ -4,7 +4,7 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node src/app"
+    "start": "env-cmd -f ./src/config/dev.env node src/app"
   },
   "keywords": [],
   "author": "",
