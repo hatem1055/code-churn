@@ -15,7 +15,7 @@ const getBranchDevs =async  ()=>{
 const churnTable = async(since,untill,devs,branches)=>{
     let table = []
     const headers = {
-        authorization:'token 53df3079a9011b416e0e194961e172d247cd62a6 '
+         authorization:'token 53df3079a9011b416e0e194961e172d247cd62a6'
     }
     try{
         for (dev of devs){        
